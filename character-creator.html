@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Metadata for the Webpage -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stats Roller</title>
+
+  <!-- Bootstrap CSS files-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-sm-6 col-sm-offset-3" style="margin-top: 10rem;">
+
+        <dl class="dl-horizontal">
+          <dt>Strength</dt>
+          <dd id="strength"></dd>
+          <dt>Constitution</dt>
+          <dd id="constitution"></dd>
+          <dt>Dexterity</dt>
+          <dd id="dexterity"></dd>
+          <dt>Intelligence</dt>
+          <dd id="intelligence"></dd>
+          <dt>Wisdom</dt>
+          <dd id="wisdom"></dd>
+          <dt>Charisma</dt>
+          <dd id="charisma"></dd>
+        </dl>
+
+        <p class="text-center" style="margin-top: 2rem;"><button role="button" class="btn btn-lg btn-danger" href="" target="_self" id="roll-em">Roll Em</button></p>
+
+      </div>
+
+    </div>
+    <!-- row -->
+
+  </div>
+  <!-- container -->
+
+
+  <!-- jQuery Javascript Library (required by Bootstrap) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Bootstrap Library -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+      function rollem() {
+        var scores = []
+
+        for (i = 0; i < 4; i++) {
+          var rando = Math.floor(Math.random() * 18 + 1);
+          scores.push(rando);
+
+          scores.sort(function(a, b) {
+            return a - b;
+          });
+
+        }
+        scores.shift();
+
+
+        var sum = 0;
+
+        for (let i = 0; i < scores.length; i++) {
+          sum += scores[i];
+        }
+
+
+        sum = Math.floor(sum / 3);
+        return sum;
+      }
+
+      $("#roll-em").on("click", function() {
+
+        $("#strength").text(rollem());
+        $("#intelligence").text(rollem());
+        $("#wisdom").text(rollem());
+        $("#dexterity").text(rollem());
+        $("#constitution").text(rollem());
+        $("#charisma").text(rollem());
+
+
+      });
+
+
+
+    });
+  </script>
+
+</body>
+
+</html>

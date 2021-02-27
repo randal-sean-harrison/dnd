@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="img/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Metadata for the Webpage -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stats Roller</title>
+
+  <!-- Bootstrap CSS files-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- font-awesome web fonts-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Montserrat Google Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+ <![endif]-->
+
+  <style>
+    .gray {
+      color: lightslategray;
+    }
+
+    .form-group input {
+      display: inline;
+      text-align: center;
+    }
+
+    body {
+      font-family: 'Montserrat', Arial, sans-serif !important;
+    }
+
+    .form-group #digby-roll,
+    .form-group #digby-total,
+    .form-group #zena-roll,
+    .form-group #zena-total,
+    .form-group #phillipa-roll,
+    .form-group #phillipa-total,
+    .form-group #weary-roll,
+    .form-group #weary-total,
+    .form-group #linnea-roll,
+    .form-group #linnea-total,
+    .form-group #monster-roll,
+    .form-group #monster-total {
+      font-size: 1.8rem;
+      padding-left: 1rem;
+    }
+
+    span[id*="-total"] {
+      font-weight: bold;
+      color: red;
+    }
+
+    .list-group-item {
+      font-size: 2rem;
+    }
+
+    .bg-mistyrose {
+      background: mistyrose;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-xs-7" style="margin-top: 2rem;">
+
+
+        <form id="the-players" style="background: aliceblue; padding: 1.5rem;">
+
+          <div class="form-group">
+            <label for="tex-input">Digby | <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 50px" class="form-control" id="digby-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="digby-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="digby-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="tex-input">Linnea | <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 50px" class="form-control" id="linnea-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="linnea-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="linnea-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="tex-input">Phillipa | <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 50px" class="form-control" id="phillipa-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="phillipa-roll"></span> <i
+              class="fa fa-fw fa-arrow-right gray" aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="phillipa-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="tex-input">Weary | <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 50px" class="form-control" id="weary-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="weary-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="weary-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="tex-input">Zena | <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 50px" class="form-control" id="zena-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="zena-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="zena-total"></span>
+          </div>
+
+        </form>
+
+        <form id="the-monster" style="background: mistyrose;padding: 1.5rem;">
+          <div class="form-group">
+            <label for="tex-input">Monster | <span class="gray">mod</span></label>
+            <input value="0" name="text-input" style="width: 50px" type="text" class="form-control" id="monster-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="monster-roll"></span> <i
+              class="fa fa-fw fa-arrow-right gray" aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="monster-total"></span>
+          </div>
+        </form>
+
+
+
+
+
+
+        <p class="text-left" style="margin-top: 2rem;"><button role="button" class="btn btn-lg btn-danger" href="" target="_self" id="roll-em">Roll Initiative</button></p>
+
+      </div>
+
+
+      <!-- Randomized -->
+      <div class="col-xs-4">
+
+        <h1>INITIATIVE</h1>
+        <ul class="list-group" id="randomized-list" style="margin-top: 2rem;">
+
+        </ul>
+
+      </div>
+
+    </div>
+    <!-- row -->
+
+  </div>
+  <!-- container -->
+
+
+  <!-- jQuery Javascript Library (required by Bootstrap) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Bootstrap Library -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+      function rollem() {
+
+        initArray = []
+
+        // get the mod
+        var phillipaMod = $("#phillipa-mod").val();
+        // make the roll
+        var roll = Math.floor(Math.random() * 20 + 1);
+        // Write the roll to the field
+        $("#phillipa-roll").text(roll);
+        // Add mod to total
+        var phillipaTotal = parseInt(phillipaMod) + roll;
+        $("#phillipa-total").text(phillipaTotal);
+
+        initArray.unshift({
+          "name": "Phillipa",
+          "roll": phillipaTotal
+        });
+
+
+        // get the mod
+        var zenaMod = $("#zena-mod").val();
+        // make the roll
+        var roll = Math.floor(Math.random() * 20 + 1);
+        // Write the roll to the field
+        $("#zena-roll").text(roll);
+        // Add mod to total
+        var zenaTotal = parseInt(zenaMod) + roll;
+        $("#zena-total").text(zenaTotal);
+
+        initArray.unshift({
+          "name": "Zena",
+          "roll": zenaTotal
+        });
+
+        // get the mod
+        var digbyMod = $("#digby-mod").val();
+        // make the roll
+        var roll = Math.floor(Math.random() * 20 + 1);
+        // Write the roll to the field
+        $("#digby-roll").text(roll);
+        // Add mod to total
+        var digbyTotal = parseInt(digbyMod) + roll;
+        $("#digby-total").text(digbyTotal);
+
+        initArray.unshift({
+          "name": "Digby",
+          "roll": digbyTotal
+        });
+
+        // get the mod
+        var wearyMod = $("#weary-mod").val();
+        // make the roll
+        var roll = Math.floor(Math.random() * 20 + 1);
+        // Write the roll to the field
+        $("#weary-roll").text(roll);
+        // Add mod to total
+        var wearyTotal = parseInt(wearyMod) + roll;
+        $("#weary-total").text(wearyTotal);
+
+        initArray.unshift({
+          "name": "Weary",
+          "roll": wearyTotal
+        });
+
+
+        // get the mod
+        var linneaMod = $("#linnea-mod").val();
+        // make the roll
+        var roll = Math.floor(Math.random() * 20 + 1);
+        // Write the roll to the field
+        $("#linnea-roll").text(roll);
+        // Add mod to total
+        var linneaTotal = parseInt(linneaMod) + roll;
+        $("#linnea-total").text(linneaTotal);
+
+        initArray.unshift({
+          "name": "Linnea",
+          "roll": linneaTotal
+        });
+
+
+        // get the mod
+        var monsterMod = $("#monster-mod").val();
+        // make the roll
+        var roll = Math.floor(Math.random() * 20 + 1);
+        // Write the roll to the field
+        $("#monster-roll").text(roll);
+        // Add mod to total
+        var monsterTotal = parseInt(monsterMod) + roll;
+        $("#monster-total").text(monsterTotal);
+
+        initArray.unshift({
+          "name": "Monster",
+          "roll": monsterTotal
+        });
+
+        // Sort the array
+        initArray.sort((a, b) => {
+          return b.roll - a.roll;
+        });
+
+      }
+
+      function appendToList() {
+
+        for (var i = 0; i < initArray.length; i++) {
+
+          if (initArray[i].name == "Monster") {
+
+            $("#randomized-list").append("<li class='list-group-item bg-mistyrose'>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+
+          } else {
+
+            $("#randomized-list").append("<li class='list-group-item'>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+          }
+
+        }
+      }
+
+      $("#roll-em").on("click", function() {
+
+        $("#randomized-list").empty();
+
+        rollem();
+        appendToList();
+
+      });
+
+
+    });
+  </script>
+
+</body>
+
+</html>
