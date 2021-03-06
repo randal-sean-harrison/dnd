@@ -146,6 +146,11 @@ $(document).ready(function() {
     }
   }
 
+  $("#clear").on("click", function(){
+    location.reload();
+  });
+
+
   $("#roll-em").on("click", function() {
 
     $("#randomized-list").empty();

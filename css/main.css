@@ -1,9 +1,20 @@
 :root {
   --heading1: #406885;
+  --graphite: #506578;
+  --white: #FFFFFF;
+  --bright-blue: #007bff;
 }
 
 .gray {
   color: lightslategray;
+}
+
+.bright-blue {
+  color: var(--bright-blue);
+}
+
+.pointer {
+  cursor: pointer;  
 }
 
 .form-group input {
@@ -52,7 +63,30 @@ span[id*="-total"] {
   color: orangered;
 }
 
+.white {
+  color: var(--white);
+}
+
 .player-name {
   padding: 1rem;
   background: white;
+}
+
+.navbar-graphite {
+  background: var(--graphite) !important;
+  padding: 2rem;
+}
+
+.navbar-graphite a,
+.navbar-graphite i {
+  color: var(--white);
+}
+
+.navbar-brand {
+  font-family: 'MedievalSharp', cursive;
+}
+
+.navbar-brand,
+.navbar-brand a {
+  font-size: 2.3rem !important;
 }
