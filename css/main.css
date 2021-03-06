@@ -1,0 +1,58 @@
+:root {
+  --heading1: #406885;
+}
+
+.gray {
+  color: lightslategray;
+}
+
+.form-group input {
+  display: inline;
+  text-align: center;
+}
+
+body {
+  font-family: 'Montserrat', Arial, sans-serif !important;
+}
+
+h1 {
+  color: var(--heading1);
+}
+
+.form-group #digby-roll,
+.form-group #digby-total,
+.form-group #zena-roll,
+.form-group #zena-total,
+.form-group #phillipa-roll,
+.form-group #phillipa-total,
+.form-group #weary-roll,
+.form-group #weary-total,
+.form-group #linnea-roll,
+.form-group #linnea-total,
+.form-group #monster-roll,
+.form-group #monster-total {
+  font-size: 1.8rem;
+  padding-left: 1rem;
+}
+
+span[id*="-total"] {
+  font-weight: bold;
+  color: red;
+}
+
+.list-group-item {
+  font-size: 2rem;
+}
+
+.bg-mistyrose {
+  background: mistyrose;
+}
+
+.red {
+  color: orangered;
+}
+
+.player-name {
+  padding: 1rem;
+  background: white;
+}
