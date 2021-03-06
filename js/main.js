@@ -108,14 +108,40 @@ $(document).ready(function() {
 
     for (var i = 0; i < initArray.length; i++) {
 
-      if (initArray[i].name == "Monster") {
+      switch (initArray[i].name) {
+        case "Monster":
+          $("#randomized-list").append("<li class='list-group-item bg-mistyrose'><i class='fad fa-fw text-danger fa-dragon mr-3'></i>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+          break;
 
-        $("#randomized-list").append("<li class='list-group-item bg-mistyrose'>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+        case "Linnea":
+          $("#randomized-list").append("<li class='list-group-item'><i class='fad fa-fw text-primary fa-shield-cross mr-3'></i>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+          break;
 
-      } else {
+        case "Digby":
+          $("#randomized-list").append("<li class='list-group-item'><i class='fad fa-fw text-primary fa-hood-cloak mr-3'></i>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+          break;
 
-        $("#randomized-list").append("<li class='list-group-item'>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+        case "Phillipa":
+          $("#randomized-list").append("<li class='list-group-item'><i class='fad fa-fw text-primary fa-helmet-battle mr-3'></i>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+          break;
+
+        case "Weary":
+          $("#randomized-list").append("<li class='list-group-item'><i class='fad fa-fw text-primary fa-hat-wizard mr-3'></i>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+          break;
+
+        case "Zena":
+          $("#randomized-list").append("<li class='list-group-item'><i class='fad fa-fw text-primary fa-mandolin mr-3'></i>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+          break;
       }
+
+      // if (initArray[i].name == "Monster") {
+      //
+      //   $("#randomized-list").append("<li class='list-group-item bg-mistyrose'>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+      //
+      // } else {
+      //
+      //   $("#randomized-list").append("<li class='list-group-item'>" + initArray[i].name + "<span class='badge'>" + initArray[i].roll + "</span></li>");
+      // }
 
     }
   }
