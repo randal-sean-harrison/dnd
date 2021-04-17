@@ -1,8 +1,15 @@
 :root {
-  --heading1: #406885;
-  --graphite: #506578;
-  --white: #FFFFFF;
+  --orange: orange;
+  --fafafa: #fafafa;
+  --orange-red: orangered;
+  --red: #e21121;
   --bright-blue: #007bff;
+  --white: white;
+  --trench-blue: #1A3C5B;
+  --slate-gray: lightslategray;
+  --graphite: #506578;
+  --rosy: #e96c85;
+  --navbar-black: #343a40;
 }
 
 .gray {
@@ -14,7 +21,7 @@
 }
 
 .pointer {
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .form-group input {
@@ -23,7 +30,7 @@
 }
 
 body {
-  font-family: 'Montserrat', Arial, sans-serif !important;
+  font-family: 'Open Sans', Arial, sans-serif !important;
 }
 
 h1 {
@@ -51,7 +58,7 @@ span[id*="-total"] {
   color: red;
 }
 
-.list-group-item {
+#randomized-list .list-group-item {
   font-size: 2rem;
 }
 
@@ -72,14 +79,10 @@ span[id*="-total"] {
   background: white;
 }
 
-.navbar-graphite {
-  background: var(--graphite) !important;
-  padding: 2rem;
-}
-
-.navbar-graphite a,
-.navbar-graphite i {
-  color: var(--white);
+.navbar-dark a,
+.navbar-dark i,
+.navbar-dark h1 {
+  color: var(--graphite) !important;
 }
 
 .navbar-brand {
@@ -88,5 +91,65 @@ span[id*="-total"] {
 
 .navbar-brand,
 .navbar-brand a {
-  font-size: 2.3rem !important;
+  font-size: 2rem !important;
+}
+
+.bg-dark {
+  background: var(--navbar-black)
+}
+
+.top-subnav {
+  padding-top: .25rem !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,.4);
+  z-index: 1000 !important;
+}
+
+.top-subnav .list-group-item {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+/* Tooltips ----------------------------------------------- */
+.tooltip .tooltip-inner {
+  background-color: var(--slate-gray);
+  font-size: .85rem;
+  padding: .35rem;
+  color: var(--white);
+}
+
+.tooltip.bs-tooltip-right .arrow:before {
+    /* border-right-color: #00cc00 !important; */
+    display: none;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+    /* border-left-color: #00cc00 !important; */
+    display: none;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+    /* border-bottom-color: #00cc00 !important; */
+    display: none;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+    /* border-top-color: #00cc00 !important; */
+    display: none;
+}
+
+.dropdown-divider {
+  border-top: 1px solid rgba(119,136,153,.2);
+}
+
+#jumbotron .jumbotron {
+  background-image: url("../img/banner.jpg");
+  box-sizing: border-box;
+  font-style: normal;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 350px;
+  /* margin-top: -55px; */
+  z-index: 1 !important;
 }

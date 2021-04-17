@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>D&D Utilities</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- local CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Google font Open Sans Pro -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Google Medieval Sharp Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="top">
+
+<div id="navbar"></div>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-sm-12">
+        <h1 class="display-3 mt-4"><i class="fad fa-swords fa-fw mr-2"></i> Roll Initiative</h1>
+      </div>
+
+      <div class="col-sm-7" style="margin-top: 2rem;">
+
+
+        <form id="the-players" style="background: aliceblue; padding: 1.5rem;">
+
+          <div class="form-group">
+            <label for="text-input"><i class="fad fa-fw fa-2x text-primary fa-hood-cloak mr-3"></i><span class="player-name mr-3" contenteditable>DIGBY</span> <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 75px" class="form-control" id="digby-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="digby-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="digby-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="text-input"><i class="fad fa-fw fa-2x text-primary fa-shield-cross mr-3"></i><span class="player-name mr-3" contenteditable>LINNEA</span> <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 75px" class="form-control" id="linnea-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="linnea-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="linnea-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="text-input"><i class="fad fa-fw fa-2x text-primary fa-helmet-battle mr-3"></i><span class="player-name mr-3" contenteditable>PHILLIPA</span> <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 75px" class="form-control" id="phillipa-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="phillipa-roll"></span> <i
+              class="fa fa-fw fa-arrow-right gray" aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="phillipa-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="text-input"><i class="fad fa-fw fa-2x text-primary fa-hat-wizard mr-3"></i><span class="player-name mr-3" contenteditable>WEARY</span> <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 75px" class="form-control" id="weary-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="weary-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="weary-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="text-input"><i class="fad fa-fw fa-2x text-primary fa-mandolin mr-3"></i><span class="player-name mr-3" contenteditable>ZENA</span> <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 75px" class="form-control" id="zena-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="zena-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="zena-total"></span>
+          </div>
+          <hr>
+          <div class="form-group">
+            <label for="text-input"><i class="fad fa-fw fa-2x text-primary fa-shield-cross mr-3"></i><span class="player-name mr-3" contenteditable>RAZ</span> <span class="gray">mod</span></label>
+            <input value="0" name="text-input" type="text" style="width: 75px" class="form-control" id="raz-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="raz-roll"></span> <i class="fa fa-fw fa-arrow-right gray"
+              aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="raz-total"></span>
+          </div>
+
+        </form>
+
+        <form id="the-monster" style="background: mistyrose;padding: 1.5rem;">
+          <div class="form-group">
+            <label for="text-input"><i class="fad fa-dragon fa-2x mr-3 text-danger"></i><span class="player-name mr-3" contenteditable>MONSTER</span> <span class="gray">mod</span></label>
+            <input value="0" name="text-input" style="width: 75px" type="text" class="form-control" id="monster-mod"> <i class="fa fa-plus fa-fw fa-lg gray" aria-hidden="true"></i> <span id="monster-roll"></span> <i
+              class="fa fa-fw fa-arrow-right gray" aria-hidden="true" style="padding-right:1rem;padding-left: 1rem;"></i> <span id="monster-total"></span>
+          </div>
+        </form>
+
+
+
+        <p class="text-left mt-4"><button role="button" class="btn btn-lg btn-primary" id="roll-em"><i class="fad fa-dice-d20 mr-2"></i> Roll Initiative</button> <span id="clear" class="bright-blue ml-3 pointer">Clear</span></p>
+
+      </div>
+
+
+      <!-- Randomized -->
+      <div class="col-sm-5">
+
+        <ul class="list-group" id="randomized-list" style="margin-top: 2rem;">
+
+        </ul>
+
+      </div>
+
+    </div>
+    <!-- row -->
+
+  </div>
+  <!-- container -->
+
+  <!-- Font Awesome 5 -->
+  <script src="https://kit.fontawesome.com/50cfd21982.js" crossorigin="anonymous"></script>
+
+  <!-- jQuery Javascript Library (required by Bootstrap) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- popper minified -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap Library -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <script src="js/main.js"></script>
+  <script src="js/roll-initiative.js"></script>
+
+
+</body>
+
+</html>
