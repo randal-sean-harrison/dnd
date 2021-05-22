@@ -48,7 +48,9 @@ h1 {
 .form-group #linnea-roll,
 .form-group #linnea-total,
 .form-group #monster-roll,
-.form-group #monster-total {
+.form-group #monster-total,
+.form-group #raz-roll,
+.form-group #raz-total {
   font-size: 1.8rem;
   padding-left: 1rem;
 }
